@@ -1,7 +1,13 @@
 <template>
   <div class="container">
     <div class="row justify-content-center mt-3">
-      <div class="col-auto">
+      <div class="col-auto mw-320px">
+        <div class="py-3 text-center">
+          <img
+            src="img/logo.png"
+            alt="Logo"
+          >
+        </div>
         <div class="form-group text-center">
           <date-picker v-model="date" />
         </div>
@@ -92,18 +98,41 @@ export default {
 </script>
 
 <style>
-.vdp-datepicker__calendar {
-  width: initial!important;
-  max-width: 300px;
-}
-.vdp-datepicker__calendar .cell.selected {
-  background-color: #17a2b8!important;
-  color: white!important;
-  border-color: #17a2b8;
-}
 .w-80px {
   width: 80px;
 }
+.mw-320px {
+  max-width: 320px;
+}
+
+/* override datepicker default fixed width date 300px */
+.vdp-datepicker__calendar {
+  width: initial!important;
+  max-width: 300px;
+  border-radius: 20px;
+  padding-bottom: 20px;
+}
+/* make circle datepicker day */
+.vdp-datepicker__calendar .cell.day {
+  border-radius: 50%;
+}
+.vdp-datepicker__calendar .next {
+  border-top-right-radius: 50%;
+}
+.vdp-datepicker__calendar .prev {
+  border-top-left-radius: 50%;
+}
+/* override default color */
+.vdp-datepicker__calendar .cell.selected {
+  background-color: #0097E3!important;
+  color: white!important;
+  border-color: #0097E3;
+}
+.btn-info {
+  background-color: #0097E3!important;
+  border-color: #0097E3;
+}
+
 /* remove bootstrap glow */
 *:hover,
 *:focus,

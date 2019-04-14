@@ -3,6 +3,7 @@
     :value="value"
     :inline="true"
     :bootstrap-styling="true"
+    initial-view="year"
     @input="onInput"
   />
 </template>
