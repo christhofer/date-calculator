@@ -1,23 +1,19 @@
 <template>
-  <vue-ctk-date-time-picker
+  <datepicker
     :value="value"
-    format="YYYY-MM-DD"
-    formated="YYYY-MM-DD"
-    :only-date="true"
     :inline="true"
-    :no-header="true"
+    :bootstrap-styling="true"
     @input="onInput"
   />
 </template>
 
 <script>
-import VueCtkDateTimePicker from 'vue-ctk-date-time-picker'
-import 'vue-ctk-date-time-picker/dist/vue-ctk-date-time-picker.css'
+import Datepicker from 'vuejs-datepicker'
 export default {
   name: 'DatePicker',
 
   components: {
-    VueCtkDateTimePicker,
+    Datepicker,
   },
 
   props: {

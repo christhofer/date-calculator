@@ -5,10 +5,12 @@ import './registerServiceWorker'
 import moment from 'moment'
 
 import Component from './components'
+import Directives from './directives'
 
 Vue.config.productionTip = false
 
 Vue.use(Component)
+Vue.use(Directives)
 
 Object.defineProperty(Vue.prototype, '$moment', { value: moment })
 
