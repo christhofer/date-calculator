@@ -1,47 +1,49 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+  import { addDays, format, subDays } from 'date-fns'
+  import { computed, ref } from 'vue'
+  import AppDatePicker from './components/datepicker/app-date-picker.vue'
+
+  const startDate = ref<Date | null>(new Date())
+  const operator = ref<'+' | '-'>('+')
+  const difference = ref(0)
+  const result = computed(() => {
+    if (!startDate.value) return null
+    if (operator.value === '-') {
+      return subDays(startDate.value, -difference.value)
+    } else {
+      return addDays(startDate.value, difference.value)
+    }
+  })
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+  <div class="mx-auto max-w-90">
+    <main class="bg-white min-h-screen px-4 flex flex-col justify-center">
+      <div class="mb-4">
+        <app-date-picker v-model="startDate" />
+      </div>
+      <div class="flex mb-8 justify-center">
+        <app-button
+          class="size-9 bg-blue-500 rounded-l text-white"
+          @click="operator = operator === '-' ? '+' : '-'">
+          {{ operator }}
+        </app-button>
+        <input
+          v-model="difference"
+          class="rounded-r border h-9 pr-2 pl-6 w-24 text-center"
+          type="number">
+      </div>
+      <div class="text-center">
+        {{ result ? format(result, 'd MMMM yyyy') : '' }}
+      </div>
+    </main>
+  </div>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-}
+<style>
+  @reference "@/assets/main.css";
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
+  html {
+    background-color: var(--color-gray-200);
   }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
 </style>
