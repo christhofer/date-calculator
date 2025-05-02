@@ -10,7 +10,9 @@
     "test:unit": "vitest",
     "build-only": "vite build",
     "type-check": "vue-tsc --build --force",
-    "lint": "eslint . --fix"
+    "lint": "eslint . --fix",
+    "publish": "sh deploy.sh",
+    "publish-windows": "sh deploy.sh"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.4",

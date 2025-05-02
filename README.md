@@ -1,6 +1,6 @@
 # Sabendino Date Calculator
 
-[Link](https://christhofernatalius.github.io/date-calculator/)
+[Link](https://christhofer.github.io/date-calculator/)
 
 Logo :
 
