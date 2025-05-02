@@ -1,45 +1,44 @@
-# sabendino-datecalc
+# Sabendino Date Calculator
 
-This template should help get you started developing with Vue 3 in Vite.
+[Link](https://christhofernatalius.github.io/date-calculator/)
 
-## Recommended IDE Setup
+Logo :
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- Color: Doraemon blue `#0097E3` & White `#FFF`
+- Font Size: `75`
+- Font Family: `Acme`
+- Created at [favicon.io](https://favicon.io)
 
-## Type Support for `.vue` Imports in TS
+## Project setup
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
+```
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### Compiles and hot-reloads for development
 
-```sh
-npm run dev
+```
+npm run serve
 ```
 
-### Type-Check, Compile and Minify for Production
+### Compiles and minifies for production
 
-```sh
+```
 npm run build
 ```
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+### Run your tests
 
-```sh
-npm run test:unit
+```
+npm run test
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+### Lints and fixes files
 
-```sh
+```
 npm run lint
 ```
+
+### Customize configuration
+
+See [Configuration Reference](https://cli.vuejs.org/config/).
