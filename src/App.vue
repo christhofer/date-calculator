@@ -17,8 +17,8 @@
 </script>
 
 <template>
-  <div class="mx-auto max-w-90">
-    <main class="bg-white min-h-screen px-4 flex flex-col justify-center">
+  <main class="fixed left-1/2 top-1/2 -translate-1/2 p-4">
+    <div class="bg-white shadow-lg rounded-lg p-4">
       <div class="mb-4">
         <app-date-picker v-model="startDate" />
       </div>
@@ -36,8 +36,8 @@
       <div class="text-center">
         {{ result ? format(result, 'd MMMM yyyy') : '' }}
       </div>
-    </main>
-  </div>
+    </div>
+  </main>
 </template>
 
 <style>
