@@ -18,7 +18,7 @@
 
 <template>
   <main class="fixed left-1/2 top-1/2 -translate-1/2 p-4">
-    <div class="bg-white shadow-lg rounded-lg p-4">
+    <div class="bg-white shadow-lg rounded-lg p-4 max-w-96 w-[calc(100vw-2rem)]">
       <div class="mb-4">
         <app-date-picker v-model="startDate" />
       </div>

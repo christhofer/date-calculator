@@ -47,20 +47,7 @@
 
   .content {
     @apply text-center mx-auto;
-    @apply w-56;
   }
-
-  @media screen and (min-width: 420px) {
-    .content {
-      @apply w-72;
-    }
-  }
-
-@media screen and (min-width: 640px) {
-  .content {
-    @apply w-80;
-  }
-}
 
   .selected {
     @apply text-white bg-blue-500 rounded-full;
